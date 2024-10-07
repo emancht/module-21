@@ -1,0 +1,22 @@
+[{
+  "_id": {
+    "$oid": "66ffb90bf683f048c08d1957"
+  },
+  "email": "emancht@gmail.com",
+  "password": "112233",
+  "firstName": "Emon",
+  "lastName": "Chakma",
+  "session": "2022-23",
+  "grade": "ten",
+  "roll": "4",
+  "dob": "01-Jan-2018",
+  "gender": "male",
+  "phone": "01722476947",
+  "image": "https://plus.unsplash.com/premium_photo-1661889099855-b44dc39e88c9?mark=https%3A%2F%2Fimages.unsplash.com%2Fopengraph%2Flogo.png&amp;mark-w=64&amp;mark-align=top%2Cleft&amp;mark-pad=50&amp;h=630&amp;w=1200&amp;crop=faces%2Cedges&amp;blend-w=1&amp;blend=000000&amp;blend-mode=normal&amp;blend-alpha=10&amp;auto=format&amp;fit=crop&amp;q=60&amp;ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzI4MDMxNDA3fA&amp;ixlib=rb-4.0.3",
+  "createdAt": {
+    "$date": "2024-10-04T09:44:43.949Z"
+  },
+  "updatedAt": {
+    "$date": "2024-10-04T09:55:18.598Z"
+  }
+}]

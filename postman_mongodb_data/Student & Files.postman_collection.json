@@ -1,0 +1,298 @@
+{
+	"info": {
+		"_postman_id": "ae720c08-426b-4883-9e6a-2823ddea9f72",
+		"name": "Student & Files",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36175599",
+		"_collection_link": "https://galactic-shadow-104053.postman.co/workspace/My-Workspace~9e814985-f907-44af-8ca1-10200d347d1b/collection/36175599-ae720c08-426b-4883-9e6a-2823ddea9f72?action=share&source=collection_link&creator=36175599"
+	},
+	"item": [
+		{
+			"name": "Students",
+			"item": [
+				{
+					"name": "New Student Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"emancht@gmail.com\",\r\n    \"password\": \"112233\",\r\n    \"firstName\": \"Emon\",\r\n    \"lastName\": \"Chakma\",\r\n    \"session\": \"2024-25\",\r\n    \"grade\": \"nine\",\r\n    \"roll\": \"4\",\r\n    \"dob\": \"01-Jan-2018\",\r\n    \"gender\": \"male\",\r\n    \"phone\": \"01722476947\",\r\n    \"image\": \"https://plus.unsplash.com/premium_photo-1661889099855-b44dc39e88c9?mark=https%3A%2F%2Fimages.unsplash.com%2Fopengraph%2Flogo.png&amp;mark-w=64&amp;mark-align=top%2Cleft&amp;mark-pad=50&amp;h=630&amp;w=1200&amp;crop=faces%2Cedges&amp;blend-w=1&amp;blend=000000&amp;blend-mode=normal&amp;blend-alpha=10&amp;auto=format&amp;fit=crop&amp;q=60&amp;ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzI4MDMxNDA3fA&amp;ixlib=rb-4.0.3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE-URL}}/register",
+							"host": [
+								"{{BASE-URL}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Student Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"emancht@gmail.com\",\r\n    \"password\": \"112233\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE-URL}}/login",
+							"host": [
+								"{{BASE-URL}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read Student Profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE-URL}}/read-profile/emancht@gmail.com",
+							"host": [
+								"{{BASE-URL}}"
+							],
+							"path": [
+								"read-profile",
+								"emancht@gmail.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Student Profile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"session\": \"2022-23\",\r\n    \"grade\": \"ten\"    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE-URL}}/update-profile/emancht@gmail.com",
+							"host": [
+								"{{BASE-URL}}"
+							],
+							"path": [
+								"update-profile",
+								"emancht@gmail.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Student LogOut",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"emancht@gmail.com\",\r\n    \"password\": \"112233\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE-URL}}/log-out",
+							"host": [
+								"{{BASE-URL}}"
+							],
+							"path": [
+								"log-out"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Files",
+			"item": [
+				{
+					"name": "Single File Upload",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/E:/Images/Images_slider/Screenshot_20.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE-URL}}/upload-single-file",
+							"host": [
+								"{{BASE-URL}}"
+							],
+							"path": [
+								"upload-single-file"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Multiple Files Upload",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": [
+										"/E:/Images/Images_slider/Screenshot_9.png",
+										"/E:/Images/Images_slider/Screenshot_10.png",
+										"/E:/Images/Images_slider/Screenshot_11.png",
+										"/E:/Images/Images_slider/Screenshot_12.png",
+										"/E:/Images/Images_slider/Screenshot_13.png"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE-URL}}/upload-multiple-files",
+							"host": [
+								"{{BASE-URL}}"
+							],
+							"path": [
+								"upload-multiple-files"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read Upload File",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE-URL}}/read-upload-file/1728030605489-Screenshot_20.png",
+							"host": [
+								"{{BASE-URL}}"
+							],
+							"path": [
+								"read-upload-file",
+								"1728030605489-Screenshot_20.png"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Single File",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{BASE-URL}}/delete-single-file/1728010085227-Screenshot_10.png",
+							"host": [
+								"{{BASE-URL}}"
+							],
+							"path": [
+								"delete-single-file",
+								"1728010085227-Screenshot_10.png"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Multiple Files",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"file\": [\r\n        \"1728010085227-Screenshot_11.png\",\r\n        \"1728010085227-Screenshot_12.png\",\r\n        \"1728010085227-Screenshot_13.png\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5050/api/deleteMultipleFile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"api",
+								"deleteMultipleFile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE-URL",
+			"value": "http://localhost:5050/api/",
+			"type": "string"
+		}
+	]
+}
